@@ -1,0 +1,209 @@
+@import "../../assets/colors.scss";
+
+.CommunitySection{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 75px;
+}
+
+.CommunityTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    gap: 20px;
+    .Divider{
+        flex: 1;
+        height: 1px;
+        background-color: #fff;
+        opacity: 0.03;
+    }
+
+    h2{
+        display: flex;
+        align-items: center;
+        img{
+            height: 35px;
+            margin: 0 10px;
+            width: auto;
+        }
+    }
+}
+
+.Community{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    .CommunityCard{
+        // width: calc( 900px / 3 );
+        // min-width: calc( 900px / 3 );
+        flex:1;
+        // aspect-ratio: 2/1.25;
+        background: linear-gradient(315deg, rgba(114,18,143,0.05) 0%, rgba(27,6,113,0.05) 100%);
+        border-radius: 15px;
+        position: relative;
+        &:nth-child(2){
+            background: linear-gradient(135deg, rgba(114,18,143,0.05) 0%, rgba(27,6,113,0.05) 100%);
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit; 
+            border: 1px solid transparent;
+            background: main-gradient(315deg) border-box;
+            -webkit-mask:
+              linear-gradient(#fff 0 0) padding-box, 
+              linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+        }
+
+        &:nth-child(2)::before{
+            background: main-gradient(135deg) border-box;
+        }
+    }
+}
+
+.CommunityCard{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 230px;
+    .Title{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        z-index: 2;
+        h2{
+            font-weight: 600;
+        }
+    }
+    p{
+        color: $off-mangenta;
+        font-size: 14px;
+        opacity: .5;
+        z-index: 2;
+    }
+    .BtnGroup{
+        margin-top: auto;
+        margin-bottom: 0;
+        display: flex;
+        gap: 10px;
+        z-index: 2;
+        button{cursor: pointer;}
+        .BtnBordered{
+            background-color: transparent;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid transparent;
+            position: relative;
+            color: $magenta;
+            &:before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: inherit; 
+                border: 3px solid transparent;
+                background: main-gradient(315deg) border-box;
+                -webkit-mask:
+                  linear-gradient(#fff 0 0) padding-box, 
+                  linear-gradient(#fff 0 0);
+                -webkit-mask-composite: destination-out;
+                mask-composite: exclude;                
+            }
+        }
+        .BtnColored{
+            color: #fff;
+            background: main-gradient(315deg);
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            &::before{
+                display: none;
+            }
+        }
+    }
+}
+
+.CommunityCard::after{
+  border-radius: inherit;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 500ms;
+  width:100%;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  z-index: 1;
+
+  background: radial-gradient(
+    400px circle at var(--mouse-x) var(--mouse-y),
+    rgba(114,18,143,0.1),
+    transparent 40%
+  );
+}
+
+.CommunityCard:hover::after{
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 450px) {
+    .CommunityTitle{
+        h2{
+            font-size: 1.2em !important;
+            img{
+                height: 25px;
+                margin: 0 10px;
+                width: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .Community{
+        align-items: center;
+        justify-content: center;
+    }
+    .CommunityCard{
+        flex: unset !important;
+        width: 300px;
+        min-width: calc( 900px / 3 );
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .BtnGroup {
+        button{font-size: 0.9em !important;}
+        .BtnColored{
+            padding: 0 15px !important;
+        }
+    }
+}
