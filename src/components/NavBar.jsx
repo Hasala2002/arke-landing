@@ -2,38 +2,60 @@ import { IconAlignRight, IconX } from '@tabler/icons'
 import React from 'react'
 import { useState } from 'react'
 import * as styles from "./styles/NavBar.module.scss"
-
+import { motion } from 'framer-motion'
 
 const NavBar = () => {
 
   const [ open, setOpen ] = useState(true)
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        type: "spring",
+        damping: 3,
+        stiffness: 50,
+        restDelta: 0.001,
+        staggerChildren: 0.2
+      }
+    }
+  }
+  
+  const item = {
+    hidden: { opacity: 0,y:-10 },
+    show: { opacity: 1 ,y:-0}
+  }
+
   return ( 
-    <div className={styles.NavBar}>
-        <div className={styles.Title}>
+    <motion.div
+    initial="hidden"
+    animate="show"
+    className={styles.NavBar} variants={container}>
+        <motion.div className={styles.Title} variants={item}>
             <img src="/arke.svg" alt="Arke Logo" />
             <span>Arkē</span>
-        </div>
+        </motion.div>
         <div className={styles.NavLinks}>
-            <a href="#home">Home</a>
-            <a href="#highlights">Hightlights</a>
-            <a href="#showcase">Showcase</a>
-            <a href="#community">Community</a>
+            <motion.a variants={item} href="#home">Home</motion.a>
+            <motion.a variants={item} href="#highlights">Hightlights</motion.a>
+            <motion.a variants={item} href="#showcase">Showcase</motion.a>
+            <motion.a variants={item} href="#community">Community</motion.a>
         </div>
-        <div className={styles.NavAuth}>
+        <motion.div variants={item} className={styles.NavAuth}>
             <a href="#">Log in</a>
             <a className={styles.Btn} href="#">Sign up</a>
             <div className={styles.RespNav} onClick={()=>{setOpen(!open)}}>
               {open ? <IconAlignRight stroke={1} size={22} /> : <IconX stroke={1} size={22} />}
             </div>
-        </div>
+        </motion.div>
         <div className={`${styles.RespNavLinks} ${open ? styles.Open : ""}`}>
             <a  onClick={()=>{setOpen(!open)}} href="#home">Home</a>
             <a  onClick={()=>{setOpen(!open)}} href="#highlights">Hightlights</a>
             <a  onClick={()=>{setOpen(!open)}} href="#showcase">Showcase</a>
             <a  onClick={()=>{setOpen(!open)}} href="#community">Community</a>
         </div>
-    </div>
+    </motion.div>
   )
 }
 
