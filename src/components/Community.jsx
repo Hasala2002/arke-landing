@@ -30,14 +30,14 @@ const Community = () => {
             </div>
             <p>Keep track of development in github by giving us a star. Open issues and feature requests. You can help us too? You’re more than welcome.</p>
             <div className={styles.BtnGroup}>
-                <button className={styles.BtnBordered}>
+                <a href="https://github.com/Hasala2002/arke/issues" className={styles.BtnBordered}>
                     <IconCode color={"#72128f"} size={19} />
                     Issues
-                </button>
-                <button className={styles.BtnColored}>
+                </a>
+                <a href="https://github.com/Hasala2002/arke" className={styles.BtnColored}>
                     <IconStar color={"#fff"} size={19} />
                     Star us
-                </button>
+                </a>
             </div>
         </div>
         <div className={styles.CommunityCard} onMouseMove={handleMouseMove}>
@@ -46,11 +46,11 @@ const Community = () => {
                 <h2>Connect</h2>
             </div>
             <p>Want to keep track of updates and new features? Want to find about new release dates and other related news? Follow us now!</p>
-            <div className={styles.BtnGroup}>
+            <a href="https://github.com/Hasala2002/arke" className={styles.BtnGroup}>
                 <button className={styles.BtnBordered}>
                     Follow
                 </button>
-            </div>
+            </a>
         </div>
         <div className={styles.CommunityCard} onMouseMove={handleMouseMove}>
                         <div className={styles.Title}>
@@ -59,10 +59,10 @@ const Community = () => {
             </div>
             <p>We do this for fun, but donations are appreciated. Thanks for the support!</p>
             <div className={styles.BtnGroup}>
-                <button className={styles.BtnBordered}>
+                <a href="https://www.buymeacoffee.com/hhasala200m" className={styles.BtnBordered}>
                     <IconCoffee color={"#72128f"} size={19} />
                     Buy me a coffee
-                </button>
+                </a>
             </div>
         </div>
     </div>

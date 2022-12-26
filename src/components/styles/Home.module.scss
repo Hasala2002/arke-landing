@@ -60,6 +60,11 @@
    border-radius: 10px;
    background-color: rgb(255, 255, 255,0.5);
    z-index: 2;
+   text-decoration: none;
+}
+
+.SubBtn{
+    text-decoration: none;
 }
 
 .MainBtn::before,.MainBtn::after, .MainBtn > .BtnBorder{

@@ -84,15 +84,16 @@ const Home = () => {
                   delay:1.75
                 }}
         className={styles.BtnGroup}>
-            <motion.div
+            <motion.a
+            href="https://app.arkechat.live"
             whileTap={{ scale: 0.99 }}
             className={styles.MainBtn} ref={MainButton}>
             <div className={styles.BtnBorder}></div>
                 <div className={styles.BtnContent}>
                 <span>Get started</span> <IconChevronRight stroke={2} />
                 </div>
-            </motion.div>
-            <button className={styles.SubBtn}>Learn more</button>
+            </motion.a>
+            <a href="#highlights" className={styles.SubBtn}> <button>Learn more</button></a>
         </motion.div>
     </div>
   )

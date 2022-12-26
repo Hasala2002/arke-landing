@@ -32,10 +32,10 @@ const NavBar = () => {
     initial="hidden"
     animate="show"
     className={styles.NavBar} variants={container}>
-        <motion.div className={styles.Title} variants={item}>
+        <motion.a href="https://arkechat.live" className={styles.Title} variants={item}>
             <img src="/arke.svg" alt="Arke Logo" />
             <span>Arkē</span>
-        </motion.div>
+        </motion.a>
         <div className={styles.NavLinks}>
             <motion.a variants={item} href="#home">Home</motion.a>
             <motion.a variants={item} href="#highlights">Hightlights</motion.a>
@@ -43,8 +43,8 @@ const NavBar = () => {
             <motion.a variants={item} href="#community">Community</motion.a>
         </div>
         <motion.div variants={item} className={styles.NavAuth}>
-            <a href="#">Log in</a>
-            <a className={styles.Btn} href="#">Sign up</a>
+            {/* <a href="#">Log in</a> */}
+            <a className={styles.Btn} href="https://app.arkechat.live">Launch App</a>
             <div className={styles.RespNav} onClick={()=>{setOpen(!open)}}>
               {open ? <IconAlignRight stroke={1} size={22} /> : <IconX stroke={1} size={22} />}
             </div>

@@ -9,7 +9,7 @@ const Footer = () => {
             <h3>The Real Private Chat</h3>
         </div>
         <div className={styles.Links}>
-            <span><a href="#">Terms</a> • <a href="#">Privacy</a></span>
+            <span><a onClick={()=>{alert("Sorry!, Still working on this.")}} href="#">Terms</a> • <a onClick={()=>{alert("Sorry!, Still working on this.")}} href="#">Privacy</a></span>
         </div>
     </div>
   )
