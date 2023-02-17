@@ -6,7 +6,7 @@ function App() {
   const blob = useRef(0)
 
   const blobAnimator = (event) => {
-    const {clientX, clientY} = event
+    // const {clientX, clientY} = event
     console.log(clientX,clientY)
     blob.current.animate({
       left: `${clientX}px`,
