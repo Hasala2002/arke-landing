@@ -46,11 +46,11 @@ const Community = () => {
                 <h2>Connect</h2>
             </div>
             <p>Want to keep track of updates and new features? Want to find about new release dates and other related news? Follow us now!</p>
-            <a href="https://github.com/Hasala2002/arke" className={styles.BtnGroup}>
-                <button className={styles.BtnBordered}>
+            <div className={styles.BtnGroup}>
+                <a href="https://github.com/Hasala2002/arke" className={styles.BtnBordered}>
                     Follow
-                </button>
-            </a>
+                </a>
+            </div>
         </div>
         <div className={styles.CommunityCard} onMouseMove={handleMouseMove}>
                         <div className={styles.Title}>
