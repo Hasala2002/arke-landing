@@ -1,13 +1,37 @@
 @import "../../assets/colors.scss";
 
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+
 .Content {
   width: 100%;
-  height: 652px;
-  margin-top: 48px;
+  height: 500px;
+  margin-top: 112px;
   display: flex;
   position: relative;
   flex-direction: column;
   justify-content: center;
+
+  .Quote {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 222;
+    font-family: "Special Elite", serif;
+    color: #fff;
+    text-align: right;
+    width: 400px;
+    opacity: 0.9;
+    font-size: 18px;
+    .Source {
+      font-family: "Plus Jakarta Sans", serif;
+      color: #fff;
+      text-align: right;
+      width: 400px;
+      font-size: 12px;
+      opacity: 0.9;
+      margin-top: 0;
+    }
+  }
 }
 
 .Content {
@@ -136,13 +160,15 @@
 
 .HeroImg {
   position: absolute;
-  top: 45%;
-  right: 0;
-  transform: translateY(-50%);
+  top: -45%;
+  right: -5%;
+  // transform: translateY(-50%);
   width: fit-content;
   img {
-    width: 500px;
+    width: 1080px;
     z-index: 2;
+    rotate: 10deg;
+    transition: transform 0.2s ease-out;
   }
 
   .Glow {

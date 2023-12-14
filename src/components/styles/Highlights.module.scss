@@ -1,76 +1,79 @@
 @import "../../assets/colors.scss";
 
-.Highlights{
-    width: 100%;
-    height: fit-content;
+.Highlights {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 60px;
+  .Highlight {
+    width: calc(1000px / 4);
+    min-width: calc(1000px / 4);
+    position: relative;
+    aspect-ratio: 1/1;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding-top: 60px;
-    .Highlight{
-        width: calc(1000px / 4);
-        min-width: calc(1000px / 4);
-        position: relative;
-        aspect-ratio: 1/1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        &:nth-child(1),&:nth-child(2),&:nth-child(3){
-            border-right: 1px solid rgb(255,255,255,0.03);
-        }
-
-        h1{
-            font-weight: 500;
-        }
-
-        p{
-            width: 75%;
-            font-size: 0.9em;
-            opacity: 0.42;
-            text-align: center;
-        }
+    gap: 20px;
+    // backdrop-filter: blur(1px);
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      border-right: 1px solid rgb(255, 255, 255, 0.03);
     }
+
+    h1 {
+      font-weight: 500;
+    }
+
+    p {
+      width: 75%;
+      font-size: 0.9em;
+      opacity: 0.6;
+      text-align: center;
+    }
+  }
 }
 
-.Glow{
-    z-index: 1;
-    width: 200px;
-    height: 200px;
-    top: -30px;
-    opacity: 0.75;
-    position: absolute;
-    @include magenta-glow;
+.Glow {
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  top: -30px;
+  opacity: 0.75;
+  position: absolute;
+  @include magenta-glow;
 }
 
 @media screen and (max-width: 830px) and (min-width: 530px) {
-    .Highlights{
-        .Highlight{
-            &:nth-child(2){
-                border-right: none !important;
-            }
-            &:nth-child(3){
-                border-right:1px solid rgb(255,255,255,0.03) !important;
-            }
-        }
+  .Highlights {
+    .Highlight {
+      &:nth-child(2) {
+        border-right: none !important;
+      }
+      &:nth-child(3) {
+        border-right: 1px solid rgb(255, 255, 255, 0.03) !important;
+      }
     }
+  }
 }
 
 @media screen and (max-width: 1200px) and (min-width: 830px) {
-    .Highlights{
-        .Highlight{
-            &:nth-child(3){
-                border-right: none !important;
-            }
-        }
+  .Highlights {
+    .Highlight {
+      &:nth-child(3) {
+        border-right: none !important;
+      }
     }
+  }
 }
 
 @media screen and (max-width: 530px) {
-    .Highlights{
-        .Highlight{
-                border-right: none !important;
-        }
+  .Highlights {
+    .Highlight {
+      border-right: none !important;
     }
+  }
 }
