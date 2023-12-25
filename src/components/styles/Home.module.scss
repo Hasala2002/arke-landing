@@ -200,7 +200,7 @@
     left: 50%;
     transform: translateX(-50%);
     img {
-      width: 300px;
+      width: 500px;
     }
   }
 
@@ -223,5 +223,9 @@
   .Content {
     justify-content: end;
     padding-bottom: 50px;
+  }
+
+  .Quote {
+    opacity: 0 !important;
   }
 }
