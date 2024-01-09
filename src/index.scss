@@ -101,6 +101,7 @@ $dot-space: 75px;
   top: 0;
   left: 0;
   backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
 }
 
 @keyframes rotate {

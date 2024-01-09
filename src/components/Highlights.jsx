@@ -1,4 +1,4 @@
-import { IconBrandOpenSource, IconBrandSocketIo, IconSpyOff } from '@tabler/icons'
+import { IconBrandOpenSource, IconBrandSocketIo, IconSpy, IconSpyOff } from '@tabler/icons'
 import React from 'react'
 import * as styles from './styles/Highlights.module.scss'
 
@@ -8,21 +8,21 @@ const Highlights = () => {
         <div className={styles.Highlights} id="highlights">
             <div className={styles.Highlight}>
                 <div className={styles.Glow}></div>
-                <IconSpyOff size={45} stroke={2} />
+                <IconSpy size={45} stroke={2} />
                 <h1>incognito</h1>
                 <p>Chat without worry as nothing is saved. Everthing will be deleted when you close your chat box.</p>
             </div>
-            {/* <div className={styles.Highlight}>
-            <div className={styles.Glow}></div>
-            <h2 style={{height:45}}>e2e</h2>
-            <h1>encrypted</h1>
-            <p>Any and all messages you send are encrypted end to end. No more unwanted snoopers.</p>
-        </div> */}
+            <div className={styles.Highlight}>
+                <div className={styles.Glow}></div>
+                <h2 style={{ height: 45 }}>e2e</h2>
+                <h1>encrypted</h1>
+                <p>Any and all messages you send are encrypted end to end. No more unwanted snoopers.</p>
+            </div>
             <div className={styles.Highlight}>
                 <div className={styles.Glow}></div>
                 <IconBrandSocketIo size={45} stroke={2} />
                 <h1>sockets</h1>
-                <p>Directly join your rooms via peer-to-peer connections. No more databases.</p>
+                <p>Directly join your rooms via web socket connections. No more databases or storing data.</p>
             </div>
             <div className={styles.Highlight}>
                 <div className={styles.Glow}></div>
