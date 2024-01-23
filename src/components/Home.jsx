@@ -34,7 +34,7 @@ const Home = () => {
       setScrollVelocity(newScrollPosition - scrollPosition);
       setScrollPosition(newScrollPosition);
 
-      console.table({ "Scroll Position": newScrollPosition, "Scroll Velocity": newScrollPosition - scrollPosition })
+      // console.table({ "Scroll Position": newScrollPosition, "Scroll Velocity": newScrollPosition - scrollPosition })
     };
 
     const handleScrollEnd = () => {
@@ -63,12 +63,10 @@ const Home = () => {
     return () => cancelAnimationFrame(animationFrame);
   }, [scrollVelocity]);
 
-
   return (
     <div className={styles.Content} id="home">
       <p className={styles.Quote}>"After the victory, Zeus removed her wings before throwing her into Tartaros"<p className={styles.Source}>-Ptolemy Hephaestion, New History</p></p>
       <div className={styles.HeroImg}>
-
         <motion.img
           initial={{ opacity: 0 }}
           animate={{
@@ -80,10 +78,8 @@ const Home = () => {
             duration: 2,
             ease: "easeInOut",
           }}
+          className={styles.AngelImg}
           src={Arke} alt="Arke" />
-        {/* <img
-          style={{ transform: `translateY(-${scrollPosition * 0.25}px)` }}
-          src={Arke} alt="Arke" /> */}
       </div>
       <motion.h1
         initial={{ opacity: 0, y: 50 }}
