@@ -3,6 +3,8 @@ import React from 'react'
 import { useState } from 'react'
 import * as styles from "./styles/NavBar.module.scss"
 import { motion } from 'framer-motion'
+// import { NavLink } from "react-router-dom";
+import { HashLink as NavLink } from 'react-router-hash-link';
 
 const NavBar = () => {
 
@@ -32,15 +34,23 @@ const NavBar = () => {
       initial="hidden"
       animate="show"
       className={styles.NavBar} variants={container}>
-      <motion.a href="#home" className={styles.Title} variants={item}>
-        <img src="/arke.svg" alt="Arke Logo" />
-        <span>Arkē</span>
+      <motion.a className={styles.Title} variants={item}>
+        <NavLink to={"/#home"} className={styles.Title} >
+          <img src="/arke.svg" alt="Arke Logo" />
+          <span>Arkē</span>
+        </NavLink>
       </motion.a>
       <div className={styles.NavLinks}>
         {/* <motion.a variants={item} href="#home">Home</motion.a> */}
-        <motion.a variants={item} href="#highlights">Hightlights</motion.a>
-        <motion.a variants={item} href="#showcase">Showcase</motion.a>
-        <motion.a variants={item} href="#community">Community</motion.a>
+        <motion.div className={styles.NavLink} variants={item}>
+          <NavLink to={"/#highlights"}>Hightlights</NavLink>
+        </motion.div>
+        <motion.div className={styles.NavLink} variants={item}>
+          <NavLink to={"/#showcase"}>Showcase</NavLink>
+        </motion.div>
+        <motion.div className={styles.NavLink} variants={item}>
+          <NavLink to={"/#community"}>Community</NavLink>
+        </motion.div>
       </div>
       <motion.div variants={item} className={styles.NavAuth}>
         {/* <a href="#">Log in</a> */}
@@ -51,9 +61,9 @@ const NavBar = () => {
       </motion.div>
       <div className={`${styles.RespNavLinks} ${open ? styles.Open : ""}`}>
         {/* <a  onClick={()=>{setOpen(!open)}} href="#home">Home</a> */}
-        <a onClick={() => { setOpen(!open) }} href="#highlights">Hightlights</a>
-        <a onClick={() => { setOpen(!open) }} href="#showcase">Showcase</a>
-        <a onClick={() => { setOpen(!open) }} href="#community">Community</a>
+        <NavLink onClick={() => { setOpen(!open) }} to="/#highlights">Hightlights</NavLink>
+        <NavLink onClick={() => { setOpen(!open) }} to="/#showcase">Showcase</NavLink>
+        <NavLink onClick={() => { setOpen(!open) }} to="/#community">Community</NavLink>
       </div>
     </motion.div>
   )

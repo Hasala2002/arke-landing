@@ -19,7 +19,7 @@ const Community = () => {
         <div className={styles.CommunitySection} id="community">
             <div className={styles.CommunityTitle}>
                 <div className={styles.Divider}></div>
-                <h2>at arkē we <img src={Heart} alt="Heart" /> open-source</h2>
+                <h2>at arkē we <img src={Heart} alt="Heart" /> community</h2>
                 <div className={styles.Divider}></div>
             </div>
             <div className={styles.Community}>
@@ -57,7 +57,7 @@ const Community = () => {
                         <IconHeartHandshake stroke={3} />
                         <h2>Donate</h2>
                     </div>
-                    <p>We do this for fun, but donations are appreciated. Thanks for the support!</p>
+                    <p>I do this for fun, but if you enjoyed Arkē donations are appreciated. Thanks for the support!</p>
                     <div className={styles.BtnGroup}>
                         <a href="https://www.buymeacoffee.com/hhasala200m" className={styles.BtnBordered}>
                             <IconCoffee color={"#72128f"} size={19} />
