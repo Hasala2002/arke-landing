@@ -130,3 +130,64 @@ $dot-space: 75px;
   padding-right: $page-padding-right;
   overflow-x: hidden;
 }
+
+.example-container {
+  display: grid;
+  width: 100%;
+  place-content: center;
+  // background: linear-gradient(to bottom right, #6366f1, #8b5cf6);
+  padding: 48px 16px;
+  // color: #0f172a;
+}
+
+.tilt-card {
+  position: relative;
+  height: fit-content;
+  width: 630px;
+  border-radius: 12px;
+  background: linear-gradient(
+    270deg,
+    rgba(114, 18, 143, 1) 0%,
+    rgba(27, 6, 113, 1) 100%
+  );
+}
+
+.card-content {
+  width: fit-content;
+  position: absolute;
+  // inset: 16px;
+  top: 64px;
+  bottom: -32px;
+  right: 8px;
+  border-radius: 12px;
+  box-shadow: -1px -1px 17px 9px rgba(114, 18, 143, 0.1),
+    0 4px 2px 0px rgba(114, 18, 143, 0.05);
+}
+
+.mouse-pointer-icon {
+  margin: 0 auto;
+  font-size: 2.25rem;
+}
+
+.hover-text {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.arkeweb-image {
+  width: 100%;
+}
+
+.arkeapp-image {
+  height: 100%;
+}
+
+@media screen and (max-width: 930px) {
+  // .example-container {
+  //   padding-top: 16px;
+  // }
+  .tilt-card {
+    width: 100%;
+  }
+}

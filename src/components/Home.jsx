@@ -72,7 +72,7 @@ const Home = () => {
           animate={{
             opacity: [0, 0.75]
           }}
-          style={{ transform: `translateY(-${scrollPosition * 0.25}px)` }}
+          style={{ transform: `translateY(-${scrollPosition * 0.25}px) skew(${scrollPosition * 0.01}deg)` }}
           transition={{
             delay: 1,
             duration: 2,
